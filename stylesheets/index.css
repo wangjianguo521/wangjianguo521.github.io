@@ -1,0 +1,162 @@
+*{  box-sizing:border-box;  margin:0;  }
+img{width:100%;height:100%;}
+html,body{height:100%;  width:100%;overflow:hidden;}
+.music{z-index:2;width:10%;position:fixed;top:5%;right:5%;animation:play 5s linear infinite;transform:rotate(0deg)}
+/*@keyframes play {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+@-webkit-keyframes play {
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}*/
+.contain{width:800%;height:100%;position:absolute;top:0;left:0%;transition:all 1s;  }
+.page{width:12.5%;height:100%;float:left;position:relative;  }
+/*第一页*/
+.page1_logo1,.page1_logo2,.page1_bar,.page1_car,.page1_car .car,.background
+{position:absolute;left:50%;transform:translateX(-50%)}
+.page1_logo1{top:22%;width:70%}
+.page1_logo2{top:31%;width:50%}
+.page1_bar{top:55%;width:5%;height:30%;border:3px solid #ccc;border-radius:50%/5%;
+ background:url("../images/t-1_3.png") no-repeat center center;background-size:cover;}
+.page1_car{top:0;width:150%;height:100%;}
+.background{width:50%;height:0;border-radius:50%/5%;background:#0FBCD9;animation:changed 4s linear 1 normal forwards;}
+@keyframes changed {
+    from{
+        height:0;
+    }
+    to{
+        height:100%;
+    }
+}
+@-webkit-keyframes changed {
+    from{
+        height:0;
+    }
+    to{
+        height:100%;
+    }
+}
+.page1_car .car{z-index:1;left:50.5%;top:0;animation:move 4s linear 1 normal forwards;width:100%;}
+@keyframes move {
+    from{
+        top:0;
+    }
+    to{
+        top:90%;
+    }
+}
+@-webkit-keyframes move {
+    from{
+        top:0;
+    }
+    to{
+        top:90%;
+    }
+
+}
+/*第二页*/
+.page2_car,.page2_bg,.page2_logo{position:absolute;left:50%;transform:translateX(-50%)}
+.page2_text{position:absolute;left:48%;width:19%;height:24%;top:8%;}
+.page2_car{width:10%;height:13%;top:26%;z-index:2;}
+.page2_bg{width:70%;height:60%;top:36%;}
+.page2_logo{width:40%;height:8%;top:88%}
+/*第三页*/
+.page3_logo,.page4_logo,.page5_logo,.page6_logo,.page7_logo,.page8_logo
+{top:5%;width:70%;position:absolute;left:45%;transform:translateX(-50%)}
+.page3_img{width:85%;height:45%;position:absolute;left:45%;top:13%;transform:translateX(-50%)}
+.page3_zip{width:55%;height:32%;position:absolute;left:27%;top:44%;transform:translateX(-50%)}
+/*方向盘和箭头*/
+.page3_direction,.page4_direction,.page5_direction,.page6_direction,.page7_direction
+{width:35%;height:28%;position:absolute;top:70%;left:50%;transform:translateX(-50%)}
+/*方向盘上的文字*/
+.page3_direction:before,.page4_direction:before,.page5_direction:before,.page6_direction:before,.page7_direction:before
+{content:'左转';display:block;position:absolute;top:30%;left:-36%}
+.page3_direction:after,.page4_direction:after,.page4_direction:after,.page5_direction:after,.page6_direction:after,.page7_direction:after
+{content:'右转';display:block;position:absolute;top:30%;right:-37%}
+/*方向盘图片*/
+.dir{transform:rotate(0deg);position:absolute;top:0;left:0;z-index:3;}
+/*方向箭头*/
+.page_left{width:108%;height:85%;position:absolute;top:-4%;left:50%;transform:translateX(-50%)}
+/*第四页*/
+.page4_map{width:90%;height:55%;position:absolute;top:14%;left:3%;}
+/*第五页*/
+.tel{width:94%;height:57%;position:absolute;top:11%;left:3%}
+/*第六页*/
+.page6_bg{width:85%;height:25%;position:absolute;top:12%;left:3%;}
+.car6_run{display:none;width:45%;height:10%;position:absolute;top:26%;left:50%;transform:translateX(-50%);overflow:hidden;
+    animation: page6_car 2s linear 4s forwards;}
+.page6.active .car6_run{display:block}
+@keyframes page6_car {
+    from{
+        left:50%;
+    }
+    to{
+        left:-23%;
+    }
+}
+@-webkit-keyframes  page6_car {
+     from{
+         left:50%;
+     }
+     to{
+         left:-23%;
+     }
+ }
+.page6_car{width:500%;height:105%;position:absolute;top:2%;left:-149%;transform:translateX(-50%);}
+.page6_car img{position:absolute;top:0%;left:80%}
+.page6_run2{width:55%;height:27%;overflow: hidden;position:absolute;top:38%;left:40%;transform:translate(-50%)}
+.page6_tel{width:400%;height:100%;position:absolute;top:0%;left:0%}
+.page6_tel img{position:absolute;top:0%;left:0%;}
+/*第七页*/
+.page7_run3{height:47%;position:absolute;top:13%;left:0%}
+.page7_run4{width:45%;height:17%;position:absolute;bottom:17%;right:-42%;display:none;animation: page7_car 2s linear 0s forwards;overflow:hidden;}
+@keyframes page7_car {
+    from{
+        bottom:17%;
+        right:-42%;
+    }
+    to{
+        bottom:43%;
+        right:27%;
+    }
+}
+@-webkit-keyframes page7_car {
+    from{
+        bottom:17%;
+        right:-42%;
+    }
+    to{
+        bottom:43%;
+        right:27%;
+    }
+
+}
+.page7.active .page7_run4{display:block}
+.page7_run4 img{width:600%;height:100%;position:absolute;top:0%;left:0%;animation: page7_img 2s steps(5,start) 3s;}
+@keyframes page7_img {
+    from{
+        left:0%
+    }
+    to{
+        left:-500%;
+    }
+}
+@-webkit-keyframes page7_img {
+    from{
+        left:0%
+    }
+    to{
+        left:-500%;
+    }
+}
+/*第八页*/
+.bottom{width:100%;height:80%;position:absolute;top:17%;right:0}
